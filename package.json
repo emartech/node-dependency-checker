@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "co": "4.6.0",
+    "gulp": "3.9.1",
+    "gulp-nsp": "2.4.0",
     "npm-check-updates": "2.6.2",
     "yargs": "4.6.0"
   },
