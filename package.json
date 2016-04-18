@@ -1,0 +1,27 @@
+{
+  "name": "node-dependency-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "check.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emartech/node-dependency-checker.git"
+  },
+  "dependencies": {
+    "co": "4.6.0",
+    "npm-check-updates": "2.6.2",
+    "yargs": "4.6.0"
+  },
+  "devDependencies": {
+    "validate-commit-message": "3.0.1"
+  },
+  "engines": {
+    "node": "5.10.1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/emartech/node-dependency-checker/issues"
+  },
+  "homepage": "https://github.com/emartech/node-dependency-checker#readme"
+}
