@@ -18,11 +18,12 @@ const check = function*() {
     console.log(packageFile);
 
     const ncuResult = yield ncu.run({ packageFile });
-    console.log('----');
-    console.log(ncuResult);
-
     const nspResult = yield Nsp.checkAsync({ package: packageFile });
-    console.log('====');
+
+    console.log('Outdated packages:');
+    console.log(ncuResult);
+    console.log('-----');
+    console.log('Vulnerabilities found:');
     console.log(nspResult);
   } catch (e) {
     console.error(e);
