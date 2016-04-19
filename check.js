@@ -1,6 +1,9 @@
 'use strict';
 
 const ncu = require('npm-check-updates');
+const path = require('path');
+const bluebird = require('bluebird');
+const Nsp = bluebird.promisifyAll(require('nsp'));
 const co = require('co');
 const argv = require('yargs')
   .usage('Usage: $0 /path/to/project/root/')
@@ -10,13 +13,17 @@ const argv = require('yargs')
 const check = function*() {
   try {
     const projectDir = argv._[0];
-    const packageFile = projectDir + '/package.json';
+    const packageFile = path.resolve(projectDir) + '/package.json';
 
     console.log(packageFile);
 
-    const upgraded = yield ncu.run({ packageFile });
+    const ncuResult = yield ncu.run({ packageFile });
+    console.log('----');
+    console.log(ncuResult);
 
-    console.log(upgraded);
+    const nspResult = yield Nsp.checkAsync({ package: packageFile });
+    console.log('====');
+    console.log(nspResult);
   } catch (e) {
     console.error(e);
   }
