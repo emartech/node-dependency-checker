@@ -21,7 +21,10 @@
     "node": "5.10.1"
   },
   "author": "",
-  "license": "UNLICENSED",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/emartech/node-dependency-checker/blob/master/LICENSE.txt"
+  },
   "bugs": {
     "url": "https://github.com/emartech/node-dependency-checker/issues"
   },
